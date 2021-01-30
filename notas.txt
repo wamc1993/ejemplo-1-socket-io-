@@ -21,3 +21,25 @@ Para configurar git
 
 6. consultar logs (para conocer el puerto que heroku asignó a la aplicación)
     heroku logs -n 1000 --tail
+
+7. Haccer el cambio de ruta de localhost:puerto a la  url de heroku
+    Luego ejecutar en consola:
+        git add .
+        git commit -m "cambio url"
+        git push heroku master
+
+8. Subir código a github:
+    Hasta ahora hemos subido el código a Heroku para desplegar la aplicación. Para subir el código a github:
+    - Crear repositorio 
+    - Al crear el repositorio vacío, github nos mjuestra opciones de código en consola para subir los cambios
+    Nosotros ejecutaremos las siguientes líneas:
+
+    git remote add origin https://github.com/wamc1993/ejemplo-1-socket-io-.git
+    git branch -M main
+    git push -u origin main
+
+    Al ejecutar las línas github pide autenticarse, en mi caso poner el correo no funcionó, así que usé mi nombre de usuario
+
+9. Poner tag de versión al repositorio
+    git tag -a v1.0.0 -m "Fin sección 2"
+    git push --tags
