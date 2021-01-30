@@ -1,5 +1,23 @@
 Para configurar git
-1. inicializar proyecto git con
+1. definir configuración global
+    git config --global user.name "wamc1993"
+    git config --global user.email "wamcdeveloper@gmail.com"
+
+2. inicializar proyecto git con
     git init
     git add .
     git commit -m "Primer commit"
+
+3. crear aplicación en heroku. En este caso, se creó la aplicación wamc93-1
+
+3. iniciar con heroku
+    heroku login
+
+4. subir proyecto local a nuevo repositorio en heroku
+    heroku git:remote -a wamc93-1
+
+5. subir!!!
+    git push heroku master
+
+6. consultar logs (para conocer el puerto que heroku asignó a la aplicación)
+    heroku logs -n 1000 --tail
